@@ -1,0 +1,14 @@
+<div class="login-corpo" >
+    <article class="post" style="background-image: url('assets/img/foquete.png')">
+        <div class="login">
+            <h2><i class="fa fa-lock"></i> Login</h2>
+        </div>
+        <div class="login-input">
+            <input type="text" [(ngModel)]="email" name="email" placeholder="e-mail">
+            <br>
+            <input type="password" [(ngModel)]="senha" name="senha" placeholder="senha">
+            <br>
+            <button class="actions" (click)="logar()" [disabled]="!email || !senha ">Login</button>
+        </div>
+    </article>
+</div>

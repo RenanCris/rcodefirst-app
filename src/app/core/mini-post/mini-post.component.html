@@ -1,0 +1,12 @@
+<section>
+    <div class="mini-posts" *ngFor="let item of agregados">
+        <!-- Mini Post -->
+        <article class="mini-post">
+            <header>
+                <h3><span style="font-weight: lighter;">Categoria:</span> {{item?.catalogo_categoria}}</h3>
+                <time class="published" >Quantidade de artigos: {{item?.qtd}}</time>
+            </header>
+        </article>
+    </div>
+    
+</section>

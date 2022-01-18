@@ -1,0 +1,16 @@
+<nav class="main">
+    <ul>
+        <li class="">
+            <a class="" href="#menu"><i class="fa fa-envelope"></i></a>
+        </li>
+        <li class="" *ngIf="isAutenticado">
+            <a class="" [routerLink]="['/adm/config']"><i class="fa fa-cogs"></i></a>
+        </li>
+        <li class="" *ngIf="!isAutenticado">
+            <a class=""  [routerLink]="['/login']"><i class="fa fa-lock"></i></a>
+        </li>
+        <li class="" *ngIf="isAutenticado">
+            <a class=""  href="#" (click)="logout()"><i class="fa fa-key"></i></a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,18 @@
+span.tecnologia {
+    background-color: #3261ba;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5px;
+    margin-top: -99px;
+    padding: 15px 18px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: -2px 3px 0 0 #dcdfec;
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+em{
+    font-style: italic;
+    color: white;
+    font-size: 25px;
+}

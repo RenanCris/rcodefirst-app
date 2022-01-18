@@ -1,0 +1,31 @@
+div.login {
+    padding: 3em 3em 1em 3em;
+    border: solid 1px rgba(160, 160, 160, 0.3);
+    margin: 4em 3em 3em 3em;
+    position: relative;
+    text-align: center;
+    background-color: #3261ba;
+
+    h2 {
+        color: white;
+    }
+}
+
+div.login-corpo{
+    margin: 0 auto;
+    max-width: 40em;
+}
+
+div.login-input{
+    margin: 2em 3em 3em 3em;
+}
+
+button{
+    width: 100%;
+}
+.post {
+    image-rendering: initial;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    background-position: right 5% bottom 3%;
+}

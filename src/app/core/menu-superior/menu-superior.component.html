@@ -1,0 +1,24 @@
+<nav class="links">
+    <ul class="menu">
+        <li class="nao-suspenso"> <a [routerLink]="">Tecnologias</a>
+            <ul>
+                <li><a [routerLink]="" (click)="obterPosts('ang')" ><em class="icon-angular"></em> Angular</a></li>
+                <li><a [routerLink]="" (click)="obterPosts('s')"><em class="icon"></em> TypeScript</a></li>
+                <li><a [routerLink]="" (click)="obterPosts('c#')"><em class="icon-csharp"></em> .Net Core</a></li>
+                <li><a [routerLink]="" (click)="obterPosts('mysql')"><em class="icon-mysql"></em> MySql</a></li>
+                <li><a [routerLink]="" (click)="obterPosts('node')"><em class="icon-nodejs"></em> NodeJs</a></li>
+                <li><a [routerLink]="" (click)="obterPosts('a')"><em class="icon-git-squared"></em> Git</a></li>
+                <li><a [routerLink]="" (click)="obterPosts('js')"><em class="icon-js"></em> JS</a></li>
+             </ul>
+        </li>
+        <li class="nao-suspenso"><a [routerLink]="">Arquitetura</a>
+            <ul>
+                <li><a [routerLink]=""><em class="icon"></em> DDD</a></li>
+                <li><a [routerLink]=""><em class="icon"></em> BDD</a></li>  
+                <li><a [routerLink]="" (click)="obterPosts('dpatt')"><em class="icon"></em> Padrões</a></li>  
+            </ul>
+        </li>
+        <li class="nao-suspenso"><a [routerLink]="'/autor'">O Autor</a></li>
+        <!-- <li class="nao-suspenso"><a [routerLink]="">Contatos</a></li> -->
+    </ul>
+</nav>
