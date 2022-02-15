@@ -1,25 +1,28 @@
 
-<article class="post" *ngFor="let p of posts">
-    <span class="tecnologia"><em class="icon-{{p.catalogoTecnologia.icone}}"></em></span>
-    <header>
-        <div class="title">
-            <h2><a [routerLink]="['/post-completo/',p.idPost]"  >{{p.titulo}}</a></h2>
-            <p><strong>Categoria: </strong>{{p.catalogoTecnologia.descricao}}</p>
+<block-ui message="Carregando dados....">
+    <article class="post" *ngFor="let p of posts">
+        <span class="tecnologia"><em class="icon-{{p.catalogoTecnologia.icone}}"></em></span>
+        <header>
+            <div class="title">
+                <h2><a [routerLink]="['/post-completo/',p.idPost]"  >{{p.titulo}}</a></h2>
+                <p><strong>Categoria: </strong>{{p.catalogoTecnologia.descricao}}</p>
+                </div>
+                <div class="meta">
+                <time class="published" datetime="2015-11-01" *ngIf="!p.dataAlteracaoPostagem">{{p.dataPostagem  | date: 'dd/MM/yyyy H:m:s'}}</time>
+                <time class="published" datetime="2015-11-01" *ngIf="p.dataAlteracaoPostagem">{{p.dataAlteracaoPostagem  | date: 'dd/MM/yyyy H:m:s'}}</time>
+                <a href="#" class="author"><span class="name">{{p.autor.nome}}</span><img src="assets/img/rc.jpg"/></a>
             </div>
-            <div class="meta">
-            <time class="published" datetime="2015-11-01" *ngIf="!p.dataAlteracaoPostagem">{{p.dataPostagem  | date: 'dd/MM/yyyy H:m:s'}}</time>
-            <time class="published" datetime="2015-11-01" *ngIf="p.dataAlteracaoPostagem">{{p.dataAlteracaoPostagem  | date: 'dd/MM/yyyy H:m:s'}}</time>
-            <a href="#" class="author"><span class="name">{{p.autor.nome}}</span><img src="assets/img/rc.jpg"/></a>
-        </div>
-    </header>
-    <p  [innerHTML]="p.texto.substring(0,200) | safeHtml"></p>
-    <footer>
-        <ul class="actions">
-        <li><a [routerLink]="['/post-completo/',p.idPost]"   class="button large"><i class="fa fa-book"></i> Continuar lendo</a></li>
-        </ul>
-     
-    </footer>
-</article>
+        </header>
+        <p  [innerHTML]="p.texto.substring(0,200) | safeHtml"></p>
+        <footer>
+            <ul class="actions">
+            <li><a [routerLink]="['/post-completo/',p.idPost]"   class="button large"><i class="fa fa-book"></i> Continuar lendo</a></li>
+            </ul>
+         
+        </footer>
+    </article>
+</block-ui>
+
 <!-- Pagination -->
 <ul class="actions pagination">
     <li><button class="disabled button large previous" (click)="proximaPagina('-')" *ngIf="paginaAtual"><i class="fa fa-backward"></i> Página Anterior</button></li>

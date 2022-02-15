@@ -31,7 +31,6 @@ export class PostComponent extends BaseComponent implements OnInit  {
     this.carrgar_Dados();
 
     this.postService.OnFiltrarPorTag.subscribe(posts => {
-      console.log(posts);
       this.posts = posts
     });
   }

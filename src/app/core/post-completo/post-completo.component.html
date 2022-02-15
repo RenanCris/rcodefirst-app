@@ -1,20 +1,23 @@
-<article class="post">
-  <header>
-    <div class="title">
-      <h2>{{post.titulo}}</h2>
-      <p><strong>Categoria: </strong>{{post.catalogoTecnologia.descricao}}</p>
-    </div>
-    <div class="meta">
-      <time class="published"  *ngIf="!post.dataAlteracaoPostagem">{{post.dataPostagem | date: 'dd/MM/yyyy H:m:s'}}</time>
-      <time class="published"  *ngIf="post.dataAlteracaoPostagem">{{post.dataAlteracaoPostagem | date: 'dd/MM/yyyy H:m:s'}}</time>
-      <a href="#" class="author"><span class="name">{{post.autor.nome}}</span><img src="assets/img/rc.jpg"/></a>
-    </div>
-  </header>
-  <p  [innerHTML]="post.texto | safeHtml"></p>
-  <footer>
-    <ul class="stats">
-      <li>E-mail: {{post.autor.email}}</li>
-    </ul>
-  </footer>
-  <a [routerLink]="['/home']" class="button large" ><i class="fa fa-backward"></i> Voltar</a>
-</article>
+<block-ui message="Carregando dados....">
+  <article class="post">
+    <header>
+      <div class="title">
+        <h2>{{post.titulo}}</h2>
+        <p><strong>Categoria: </strong>{{post.catalogoTecnologia?.descricao}}</p>
+      </div>
+      <div class="meta">
+        <time class="published"  *ngIf="!post.dataAlteracaoPostagem">{{post.dataPostagem | date: 'dd/MM/yyyy H:m:s'}}</time>
+        <time class="published"  *ngIf="post.dataAlteracaoPostagem">{{post.dataAlteracaoPostagem | date: 'dd/MM/yyyy H:m:s'}}</time>
+        <a href="#" class="author"><span class="name">{{post.autor?.nome}}</span><img src="assets/img/rc.jpg"/></a>
+      </div>
+    </header>
+    <p  [innerHTML]="post.texto | safeHtml"></p>
+    <footer>
+      <ul class="stats">
+        <li>E-mail: {{post.autor?.email}}</li>
+      </ul>
+    </footer>
+    <a [routerLink]="['/home']" class="button large" ><i class="fa fa-backward"></i> Voltar</a>
+  </article>
+</block-ui>
+
